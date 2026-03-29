@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --gray-color: dimgray;
+
+}
+.signUp-Message {
+  i {
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.search-icon {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.search-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+}
+
+.Header {
+  background-color: rgb(230, 230, 230);
+  a:first-child {
+    font-size: 60px;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 45px;
+  }
+  .num p {
+    font-size: 15px;
+  }
+  .num p:first-child {
+    font-size: 40px;
+  }
+  .num p:nth-child(2) {
+    color: dimgray;
+  }
+  .num {
+    font-weight: 700;
+    font-weight: bold;
+    color: black;
+    border-right: dimgray 1px solid;
+  }
+  .num:last-child {
+    border-right: none;
+  }
+}
+
+.brands {
+  text-align: center;
+  .item:nth-child(1) {
+    font-family: "Playfair Display";
+  }
+  .item:nth-child(2) {
+    font-family: "Montserrat";
+  }
+  .item:nth-child(3) {
+    font-family: "Poppins";
+  }
+  .item:nth-child(4) {
+    font-family: "Lora";
+  }
+  .item:nth-child(5) {
+    font-family: "Oswald";
+  }
+}
+
+.arrivals {
+  .cards .card .image {
+    height: 250px;
+    overflow: hidden;
+  }
+  button {
+    border: 1px gray solid;
+  }
+}
+
+.dress-style {
+  .style-card {
+    height: 300px;
+    border-radius: 20px;
+    padding: 25px;
+    background-size: cover;
+    background-position:70px;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: white;
+  }
+  
+  .style-card:hover {
+    transform: scale(1.03); /* حركة خفيفة عند الوقوف على الكارت */
+    }
+  .card-1 {
+    background-image: url("/images/m1.png");
+  }  .card-2 {
+    background-image: url("/images/m2.png");
+  }  .card-3 {
+    background-image: url("/images/p1.jpg");
+  }  .card-4 {
+    background-image: url("/images/m1.png");
+  }
+}
+
+.customers{
+  overflow: hidden;
+  .customer-card{
+    width: 420px !important;
+    flex-shrink: 0;
+    margin: 10px;
+    transform: translateX(-80%);
+  }
+}
+
+footer{
+  transform: translateY(-100px);
+  padding-top: 150px;
+  z-index: -100;
+  position: relative;
+  .footer-item{
+    ul{
+      padding-left: 0;
+    }
+    li{
+      list-style: none;
+      color: var(--gray-color);
+    }
+  }
+}
