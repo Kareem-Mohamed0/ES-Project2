@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&family=Poppins&family=Lora&family=Oswald&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="/css/product-details.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- sign Up Message -->
+    <div class="bg-black signUp-Message">
+      <div class="container position-relative">
+        <p class="text-light text-center p-1 m-0">
+          sign up and get 20% off to your first order.
+          <a class="text-light">Sign Up Now</a>
+        </p>
+        <i
+          class="fa-solid fa-xmark d-inline-block text-light position-absolute"></i>
+      </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg py-4">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <h2 class="fw-bold">SHOP.CO</h2>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Pricing</a>
+            </li>
+          </ul>
+
+          <!-- search -->
+          <div class="input-group w-auto me-3">
+            <input
+              class="form-control search-input rounded-5"
+              type="text"
+              placeholder="Search"
+              name="search" />
+          </div>
+
+          <!-- icons -->
+          <div class="d-flex gap-3">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-circle-user"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Loading SVG -->
+
+    <!-- Main -->
+    <div class="container">
+      <hr />
+      <p>Home > Shop> product</p>
+      <div class="row g-4">
+        <div
+          class="d-flex flex-row flex-md-column order-2 order-md-1 gap-3 col-md-2 col-lg-2">
+          <div class="image">
+            <img
+              class="img-fluid rounded-2 border border-2 border-black"
+              src=""
+              alt="polo1" />
+          </div>
+          <div class="image">
+            <img
+              class="img-fluid rounded-2"
+              src=""
+              alt="polo1" />
+          </div>
+          <div class="image">
+            <img
+              class="img-fluid rounded-2"
+              src=""
+              alt="polo1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4 order-1 order-md-2">
+          <div class="main-image">
+            <img class="rounded-2" src="" alt="" />
+          </div>
+        </div>
+        <div
+          class="cart-details col-12 col-md-6 col-lg-6 order-3 d-flex flex-column gap-2">
+          <h1 class="name text-uppercase fw-bold">one life graphic t-shirt</h1>
+          <div class="stars">
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            4/3
+          </div>
+          <br />
+          <span class="price fw-bold fs-4"> $1000 </span>
+          <p class="text-secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            eveniet in iusto, cumque aut fuga asperiores quia hic fugit neque
+            corrupti ut beatae delectus suscipit dolor enim et illo? Ipsam.
+          </p>
+          <hr />
+          <h5>select colors</h5>
+          <div class="colors">
+            <span class="rounded-pill bg-success" data-color="green"></span>
+            <span class="rounded-pill bg-warning" data-color="yellow"></span>
+            <span class="rounded-pill bg-danger" data-color="red"></span>
+          </div>
+          <hr />
+          <h5>choose size</h5>
+          <div class="sizes d-flex gap-2 flex-wrap">
+            <span class="rounded-pill text-secondary p-2">X-Small</span>
+            <span class="rounded-pill text-secondary p-2">Small</span>
+            <span class="rounded-pill text-secondary p-2">Medium</span>
+            <span class="rounded-pill text-secondary p-2">Large</span>
+            <span class="rounded-pill text-secondary p-2">X-Large</span>
+            <span class="rounded-pill text-secondary p-2">XX-Large</span>
+          </div>
+          <hr />
+          <div class="cart-quantity d-flex gap-4">
+            <div
+              class="quantity-btn border border-1 bg-body-secondary rounded-pill w-50 w-md-25 d-flex justify-content-around fw-bold fs-5 p-1">
+              <button class="border-0 rounded-pill fw-bold bg-body-secondary">
+                -
+              </button>
+              <span>1</span>
+              <button class="border-0 rounded-pill fw-bold bg-body-secondary">
+                +
+              </button>
+            </div>
+            <div class="add-to-cart w-75">
+              <button class="p-2 bg-black text-white rounded-pill w-100">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---- Tabs ----->
+      <nav>
+        <div
+          class="nav nav-tabs d-flex justify-content-between my-5"
+          id="nav-tab"
+          role="tablist">
+          <button
+            class="nav-link text-secondary border-0 active"
+            id="nav-home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-ProductDetails"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true">
+            Product Details
+          </button>
+          <button
+            class="nav-link text-secondary border-0"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false">
+            Rating & Reviews
+          </button>
+          <button
+            class="nav-link text-secondary border-0"
+            id="nav-contact-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-contact"
+            type="button"
+            role="tab"
+            aria-controls="nav-contact"
+            aria-selected="false">
+            FAQs
+          </button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-ProductDetails"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+          tabindex="0">
+          <div class="row pt-4">
+            <div class="col-md-6">
+              <h5>Product Specifications</h5>
+              <p class="text-secondary">
+                This graphic t-shirt is designed for both comfort and style,
+                featuring high-quality cotton fabric and a durable print.
+              </p>
+              <table class="table table-borderless">
+                <tr>
+                  <th class="ps-0">Material</th>
+                  <td class="text-secondary">100% Premium Cotton</td>
+                </tr>
+                <tr>
+                  <th class="ps-0">Fit</th>
+                  <td class="text-secondary">Regular Fit</td>
+                </tr>
+                <tr>
+                  <th class="ps-0">Weight</th>
+                  <td class="text-secondary">180 GSM</td>
+                </tr>
+                <tr>
+                  <th class="ps-0">Care</th>
+                  <td class="text-secondary">
+                    Machine wash cold, tumble dry low
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <h5>Key Features</h5>
+              <ul class="text-secondary">
+                <li>Breathable fabric for all-day comfort.</li>
+                <li>Reinforced stitching on collar and sleeves.</li>
+                <li>Eco-friendly ink used for graphic print.</li>
+                <li>Pre-shrunk to prevent shrinkage after washing.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+          tabindex="0">
+          <div class="d-flex justify-content-between align-items-center my-4">
+            <h5 class="fw-bold mb-0">
+              All Reviews
+              <span class="text-secondary fw-normal fs-6">(451)</span>
+            </h5>
+            <div class="review-controls d-flex gap-2">
+              <button class="btn btn-light rounded-circle border">
+                <i class="fa-solid fa-sliders"></i>
+              </button>
+              <select
+                class="form-select rounded-pill w-auto bg-light border-0 px-3">
+                <option>Latest</option>
+              </select>
+              <button class="btn btn-black text-white rounded-pill px-4 py-2">
+                Write a Review
+              </button>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <div class="review-card border rounded-4 p-4 h-100">
+                <div class="d-flex justify-content-between">
+                  <div class="stars text-warning mb-2">
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <i class="fa-solid fa-ellipsis text-secondary"></i>
+                </div>
+                <h6 class="fw-bold mb-1">
+                  Samantha D.
+                  <i class="fa-solid fa-circle-check text-success ms-1"></i>
+                </h6>
+                <p class="text-secondary small">
+                  "I absolutely love this t-shirt! The design is unique and the
+                  fabric feels so comfortable. As a fellow designer, I
+                  appreciate the attention to detail. It's become my favorite
+                  go-to shirt."
+                </p>
+                <p class="text-secondary mt-3 mb-0 fw-medium small">
+                  Posted on August 14, 2023
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="review-card border rounded-4 p-4 h-100">
+                <div class="d-flex justify-content-between">
+                  <div class="stars text-warning mb-2">
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                  <i class="fa-solid fa-ellipsis text-secondary"></i>
+                </div>
+                <h6 class="fw-bold mb-1">
+                  Alex M.
+                  <i class="fa-solid fa-circle-check text-success ms-1"></i>
+                </h6>
+                <p class="text-secondary small">
+                  "The t-shirt exceeded my expectations! The colors are vibrant
+                  and the print quality is top-notch. Being a UI/UX designer
+                  myself, I'm quite picky about aesthetics, and this t-shirt
+                  definitely gets a thumbs up from me."
+                </p>
+                <p class="text-secondary mt-3 mb-0 fw-medium small">
+                  Posted on August 15, 2023
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <button class="btn btn-outline-secondary rounded-pill px-5">
+              Load More Reviews
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="nav-contact"
+          role="tabpanel"
+          aria-labelledby="nav-contact-tab"
+          tabindex="0">
+          <div class="accordion accordion-flush pt-4" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-bold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1">
+                  What is the return policy?
+                </button>
+              </h2>
+              <div
+                id="faq1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  You can return any unworn item within 30 days of purchase.
+                  Please ensure tags are still attached.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-bold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2">
+                  How do I choose the right size?
+                </button>
+              </h2>
+              <div
+                id="faq2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Check our size guide link (next to size selection) for exact
+                  measurements in inches and cm.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-bold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3">
+                  Is the graphic print durable?
+                </button>
+              </h2>
+              <div
+                id="faq3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Yes, we use screen-printing technology that ensures the design
+                  won't crack or peel after multiple washes.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="Email-container my-5">
+      <div class="container bg-black rounded-5">
+        <div class="row">
+          <div class="col-12 col-md-6 p-5">
+            <p class="fs-1 text-white fw-bold text-uppercase">
+              Stay Up to date about our latest offers
+            </p>
+          </div>
+          <div class="col-12 col-md-6 px-5">
+            <form
+              action="post"
+              class="ms-auto d-flex flex-column justify-content-center h-100 w-100 gap-2 py-5">
+              <input
+                class="form-control rounded-pill"
+                type="email"
+                name="email"
+                id=""
+                placeholder="Enter your email address" />
+              <button class="py-2 px-5 rounded-5 text-black bg-white fw-bold">
+                Subscribe To newsLetter
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="bg-body-secondary">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-3">
+            <h3 class="fw-bold fs-1">Shop.Co</h3>
+            <p class="text-secondary">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+              rerum numquam iure nobis modi enim?
+            </p>
+            <i class="fa-brands fa-square-twitter fs-4"></i>
+            <i class="fa-brands fa-facebook fs-4"></i>
+            <i class="fa-brands fa-instagram fs-4"></i>
+            <i class="fa-brands fa-github fs-4"></i>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Help</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">FAQ</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Resources</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Company</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-5" />
+        <div class="py-5 d-flex justify-content-between align-items-center">
+          <p class="m-0">shop.co &copy; 2001-2026, All Rights Reserved</p>
+          <div class="images">
+            <img src="/images/visa.png" alt="" />
+            <img src="/images/master.png" alt="" />
+            <img src="/images/applePay.png" alt="" />
+            <img src="/images/googlePay.png" alt="" />
+            <img src="/images/visa.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Choosing Modal -->
+    <div
+      class="modal fade"
+      id="ChoosingModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>products added to the cart:</p>
+            <a href="product.html" class="w-100 btn btn-secondary my-2"
+              >Complete shopping</a
+            >
+            <a href="/html/cart.html" class="w-100 btn btn-success my-2"
+              >Go to cart</a
+            >
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="loading-spinner position-fixed top-0 start-0"
+      style="
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 9999;
+      ">
+      <img
+        class="position-fixed top-50 start-50 translate-middle"
+        src="/images/12-dots-scale-rotate.svg"
+        alt=""
+        style="width: 70px" />
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/ba307dddd0.js"
+      crossorigin="anonymous"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/product-details.js"></script>
+    <script type="module" src="/js/shared.js"></script>
+  </body>
+</html>

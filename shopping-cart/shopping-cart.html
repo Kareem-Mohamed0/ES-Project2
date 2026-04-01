@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Review your SHOP.CO bag, apply a promo code, and checkout securely." />
+    <title>Your cart — SHOP.CO</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&family=Poppins&family=Lora&family=Oswald&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/shopping-cart.css" />
+  </head>
+  <body class="shopping-cart-page">
+    <a
+      href="#main-content"
+      class="visually-hidden-focusable btn btn-dark btn-sm position-fixed top-0 start-0 m-2 skip-to-main"
+      style="z-index: 1080"
+      >Skip to main content</a
+    >
+
+    <div class="bg-black signUp-Message text-white small">
+      <div class="container position-relative py-2">
+        <p class="text-center m-0">
+          Sign up and get 20% off your first order.
+          <a class="text-white text-decoration-underline fw-semibold" href="#newsletter"
+            >Sign up now</a
+          >
+        </p>
+        <button
+          type="button"
+          class="btn btn-link text-white position-absolute announcement-close p-0 border-0 shadow-none"
+          data-dismiss="announcement"
+          aria-label="Dismiss announcement">
+          <i class="fa-solid fa-xmark fa-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3 sticky-top"
+      style="z-index: 1030"
+      aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand text-decoration-none text-dark" href="../index.html">
+          <span class="fw-bold fs-3">SHOP.CO</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../shop/index.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../shop/index.html#catalog-section-title"
+                >Features</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../shop/index.html#catalog-section-title"
+                >Pricing</a
+              >
+            </li>
+          </ul>
+
+          <div
+            class="input-group me-lg-3 mb-3 mb-lg-0 flex-grow-1 d-none d-md-flex"
+            style="max-width: 32rem">
+            <input
+              class="form-control search-input rounded-5"
+              type="search"
+              placeholder="Search products"
+              name="search"
+              aria-label="Search products" />
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <a
+              href="shopping-cart.html"
+              class="text-dark position-relative d-inline-flex align-items-center text-decoration-none"
+              aria-label="Shopping cart"
+              aria-current="page">
+              <i class="fa-solid fa-cart-shopping fs-5" aria-hidden="true"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-count-badge d-none"
+                data-cart-count></span>
+            </a>
+            <a
+              href="#"
+              class="text-dark"
+              aria-label="Account"
+              data-demo-message="Account sign-in is a demo on this site — browse the shop anytime."
+              ><i class="fa-regular fa-circle-user fs-5" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content" class="container py-4 py-md-5" tabindex="-1">
+      <hr class="d-none d-md-block" />
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small text-secondary mb-3">
+          <li class="breadcrumb-item">
+            <a class="text-decoration-none text-secondary" href="../index.html"
+              >Home</a
+            >
+          </li>
+          <li class="breadcrumb-item active text-dark" aria-current="page">
+            Cart
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="fw-bold text-uppercase display-6 mb-4">Your Cart</h1>
+
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-8">
+          <div id="cart-empty" class="alert alert-light border rounded-4 d-none">
+            Your cart is empty.
+            <a href="../shop/index.html" class="fw-semibold">Continue shopping</a>
+          </div>
+          <div
+            id="cart-line-items"
+            class="d-flex flex-column gap-3"
+            aria-live="polite"></div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="card border rounded-4 order-summary-card shadow-sm">
+            <div class="card-body p-4">
+              <h2 class="h5 fw-bold mb-4">Order Summary</h2>
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-secondary">Subtotal</span>
+                <span class="fw-semibold" id="summary-subtotal">$0</span>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-secondary">Discount (-20%)</span>
+                <span class="fw-semibold summary-row-discount" id="summary-discount"
+                  >-$0</span
+                >
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-secondary">Delivery Fee</span>
+                <span class="fw-semibold" id="summary-delivery">$15</span>
+              </div>
+
+              <hr class="my-3" />
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-4">
+                <span class="fw-bold">Total</span>
+                <span class="fw-bold fs-5" id="summary-total">$0</span>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text bg-body-secondary border-end-0 rounded-start-pill">
+                  <i class="fa-solid fa-tag text-secondary"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control border-start-0 bg-body-secondary"
+                  id="promo-input"
+                  placeholder="Add promo code"
+                  aria-label="Promo code" />
+                <button
+                  class="btn btn-dark px-4 rounded-end-pill"
+                  type="button"
+                  id="promo-apply">
+                  Apply
+                </button>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-dark w-100 rounded-pill py-3 d-flex align-items-center justify-content-center gap-2 btn-checkout"
+                data-demo-message="Checkout is a demo — your bag is saved in this browser only.">
+                Go to Checkout
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="newsletter" class="Email-container my-5" tabindex="-1">
+      <div class="container bg-black rounded-5">
+        <div class="row">
+          <div class="col-12 col-md-6 p-5">
+            <p class="fs-1 text-white fw-bold text-uppercase">
+              Stay Up to date about our latest offers
+            </p>
+          </div>
+          <div class="col-12 col-md-6 px-5">
+            <form
+              id="newsletter-form"
+              action="#"
+              method="post"
+              class="ms-auto d-flex flex-column justify-content-center h-100 w-100 gap-2 py-5">
+              <input
+                class="form-control rounded-pill"
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="Enter your email address" />
+              <button
+                type="submit"
+                class="py-2 px-5 rounded-5 text-black bg-white fw-bold">
+                Subscribe to newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-body-secondary site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-3">
+            <h3 class="fw-bold fs-1">Shop.Co</h3>
+            <p class="text-secondary">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+              rerum numquam iure nobis modi enim?
+            </p>
+            <a
+              href="https://twitter.com"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="text-dark me-2"
+              aria-label="Twitter"
+              ><i class="fa-brands fa-square-twitter fs-4" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://facebook.com"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="text-dark me-2"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook fs-4" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://instagram.com"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="text-dark me-2"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram fs-4" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://github.com"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="text-dark"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github fs-4" aria-hidden="true"></i
+            ></a>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Company</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Help</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">FAQ</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Resources</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-5" />
+        <div
+          class="py-5 flex-column flex-md-row d-flex justify-content-between align-items-center gap-3">
+          <p class="m-0 small text-center text-md-start">
+            SHOP.CO &copy; 2001–2026. All rights reserved.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-2 footer-payments">
+            <img src="../images/visa.png" alt="Visa" />
+            <img src="../images/master.png" alt="Mastercard" />
+            <img src="../images/applePay.png" alt="Apple Pay" />
+            <img src="../images/googlePay.png" alt="Google Pay" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/ba307dddd0.js"
+      crossorigin="anonymous"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

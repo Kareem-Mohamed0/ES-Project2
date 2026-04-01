@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart | SHOP.CO</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .cart-item-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      .order-summary {
+        background: #f8f9fa;
+        border-radius: 20px;
+        padding: 25px;
+      }
+      .btn-black {
+        background: black;
+        color: white;
+        border-radius: 50px;
+      }
+      .promo-input {
+        background: #eee;
+        border: none;
+        border-radius: 50px 0 0 50px;
+      }
+      .promo-btn {
+        border-radius: 0 50px 50px 0;
+      }
+      .quantity-control {
+        background: #f3f3f3;
+        border-radius: 50px;
+        padding: 5px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- sign Up Message -->
+    <div class="bg-black signUp-Message">
+      <div class="container position-relative">
+        <p class="text-light text-center p-1 m-0">
+          sign up and get 20% off to your first order.
+          <a class="text-light">Sign Up Now</a>
+        </p>
+        <i
+          class="fa-solid fa-xmark d-inline-block text-light position-absolute"></i>
+      </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg py-4">
+      <div class="container">
+        <a class="navbar-brand" href="/html/index.html">
+          <h2 class="fw-bold">SHOP.CO</h2>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/html/index.html" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Pricing</a>
+            </li>
+          </ul>
+
+          <!-- search -->
+          <div class="input-group w-auto me-3 flex-grow-1">
+            <input
+              class="form-control search-input rounded-5"
+              type="text"
+              placeholder="Search"
+              name="search" />
+          </div>
+
+          <!-- icons -->
+          <div class="d-flex gap-3 justify-content-center">
+            <a href="cart.html"
+              ><i
+                class="fa-solid fa-cart-shopping text-decoration-none text-black"></i
+            ></a>
+            <a href=""><i class="fa-regular fa-circle-user text-black"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <hr />
+
+    <div class="container my-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html" class="text-decoration-none text-secondary"
+              >Home</a
+            >
+          </li>
+          <li class="breadcrumb-item active">Cart</li>
+        </ol>
+      </nav>
+
+      <h1 class="fw-bold text-uppercase mb-4">Your Cart</h1>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div id="cart-items-container" class="border rounded-4 p-3"></div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="order-summary border">
+            <h4 class="fw-bold mb-4">Order Summary</h4>
+            <div class="d-flex justify-content-between mb-2">
+              <span class="text-secondary">Subtotal</span>
+              <span class="fw-bold" id="subtotal">$0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span class="text-secondary">Discount (-20%)</span>
+              <span class="text-danger fw-bold" id="discount">-$0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <span class="text-secondary">Delivery Fee</span>
+              <span class="fw-bold" id="delivery">$15</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mb-4">
+              <span class="fs-5 fw-bold">Total</span>
+              <span class="fs-4 fw-bold" id="total">$0</span>
+            </div>
+
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control promo-input"
+                placeholder="Add promo code" />
+              <button class="btn btn-black promo-btn px-4">Apply</button>
+            </div>
+
+            <button class="btn btn-black w-100 py-3 mt-2 fw-bold">
+              Go to Checkout <i class="fa-solid fa-arrow-right ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email Control -->
+    <div class="Email-container my-5">
+      <div class="container bg-black rounded-5">
+        <div class="row">
+          <div class="col-12 col-md-6 p-5">
+            <p class="fs-1 text-white fw-bold text-uppercase">
+              Stay Up to date about our latest offers
+            </p>
+          </div>
+          <div class="col-12 col-md-6 px-5">
+            <form
+              action="post"
+              class="ms-auto d-flex flex-column justify-content-center h-100 w-100 gap-2 py-5">
+              <input
+                class="form-control rounded-pill"
+                type="email"
+                name="email"
+                id=""
+                placeholder="Enter your email address" />
+              <button class="py-2 px-5 rounded-5 text-black bg-white fw-bold">
+                Subscribe To newsLetter
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-body-secondary">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-3">
+            <h3 class="fw-bold fs-1">Shop.Co</h3>
+            <p class="text-secondary">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+              rerum numquam iure nobis modi enim?
+            </p>
+            <i class="fa-brands fa-square-twitter fs-4"></i>
+            <i class="fa-brands fa-facebook fs-4"></i>
+            <i class="fa-brands fa-instagram fs-4"></i>
+            <i class="fa-brands fa-github fs-4"></i>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Help</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">FAQ</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Resources</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <div class="company col-6 col-md-3 footer-item">
+            <h4 class="text-uppercase">Company</h4>
+            <ul>
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-5" />
+        <div class="py-5 d-flex justify-content-between align-items-center">
+          <p class="m-0">shop.co &copy; 2001-2026, All Rights Reserved</p>
+          <div class="images">
+            <img src="/images/visa.png" alt="" />
+            <img src="/images/master.png" alt="" />
+            <img src="/images/applePay.png" alt="" />
+            <img src="/images/googlePay.png" alt="" />
+            <img src="/images/visa.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script type="module" src="../js/cart.js"></script>
+  </body>
+</html>
