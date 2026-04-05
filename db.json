@@ -46,7 +46,7 @@
       "price": 950,
       "rating": 4.4,
       "category": "T-Shirt",
-      "color": "bg-danger",
+      "color": "blue",
       "size": "Medium",
       "style": "Streetwear",
       "image": "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&h=800&fit=crop",
@@ -127,7 +127,7 @@
       "color": "bg-secondary",
       "size": "Medium",
       "style": "Smart Casual",
-      "image": "https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?w=600&h=800&fit=crop",
+      "image": "/images/m2.jpg",
       "image1": "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&h=800&fit=crop",
       "image2": "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=600&h=800&fit=crop"
     },
@@ -231,7 +231,7 @@
       "color": "bg-dark",
       "size": "Large",
       "style": "Sporty",
-      "image": "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&h=800&fit=crop",
+      "image": "/images/m1.png",
       "image1": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&h=800&fit=crop",
       "image2": "https://images.unsplash.com/photo-1588117305388-c2631a279f82?w=600&h=800&fit=crop"
     },

@@ -8,6 +8,10 @@
     transition: 0.2s;
   }
 }
+.image img{
+  cursor: pointer;
+  transition: 0.3s;
+}
 .cart-details {
   .colors {
     span {

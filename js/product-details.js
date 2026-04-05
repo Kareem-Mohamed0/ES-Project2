@@ -95,3 +95,61 @@ document
     quantityNum.textContent = currentValue + 1;
   });
 //---------------------------
+
+let imagesEls = document.querySelectorAll(".image img");
+let mainImageEl = document.querySelector(".main-image img");
+imagesEls.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    imagesEls.forEach((img) => {
+      img.style.cssText = `border: none !important;`;
+    });
+    img.style.cssText = "border: 4px solid black !important";
+    mainImageEl.src = img.src;
+  });
+});
+
+//-----------------------------
+
+
+window.addEventListener("load", () => {
+    const mainImageEl = document.querySelector(".main-image img"); 
+
+    if (!mainImageEl) {
+        console.error("Main image element not found");
+        return;
+    }
+
+    const ImageContainer = document.createElement("div");
+    ImageContainer.style.cssText = `
+        width: 250px; 
+        height: 250px; 
+        overflow: hidden; 
+        position: fixed; 
+        border: 2px solid #000; 
+        z-index: 1000;
+        display: none; 
+        background: white;
+    `;
+    
+    document.body.append(ImageContainer);
+
+    mainImageEl.addEventListener("mousemove", (e) => {
+        ImageContainer.style.display = "block"; 
+
+        ImageContainer.innerHTML = `
+            <img src="${mainImageEl.src}" alt="zoom" 
+                 style="width: 800px; position: absolute; max-width: none;">
+        `;
+        
+        ImageContainer.style.left = (e.clientX + 20) + "px"; 
+        ImageContainer.style.top = (e.clientY + 20) + "px";
+
+        const zoomedImg = ImageContainer.querySelector("img");
+        zoomedImg.style.left = -(e.offsetX * 1.5) + "px";
+        zoomedImg.style.top = -(e.offsetY * 1.5) + "px";
+    });
+
+    mainImageEl.addEventListener("mouseleave", () => {
+        ImageContainer.style.display = "none";
+    });
+});

@@ -72,3 +72,11 @@ input[type="Range"] {
     cursor: pointer;
     transition: 0.2s;
 }
+
+.pagination .page-link:focus,
+.pagination .page-link.active{
+  background-color: rgb(236, 236, 236);
+  outline: none;
+  box-shadow: none;
+  border-radius: 15px !important;
+}
